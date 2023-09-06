@@ -5,6 +5,12 @@ fetch('https://dummyjson.com/users')
     displayUsers(users.users);
   })
 
+  function loader() {
+    if(response) {
+      document.getElementById("loader").style.display = "none"
+    }
+  }
+
   function displayUsers(users) {
     let userCard = '<div class="user-cards">';
     
